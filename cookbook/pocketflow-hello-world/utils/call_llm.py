@@ -1,7 +1,10 @@
 from openai import OpenAI
+import os
+from dotenv import load_dotenv
 
 def call_llm(prompt):    
-    client = OpenAI(api_key="YOUR_API_KEY_HERE")
+    load_dotenv()
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
     r = client.chat.completions.create(
         model="gpt-4o",
         messages=[{"role": "user", "content": prompt}]
