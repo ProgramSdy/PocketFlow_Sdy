@@ -4,7 +4,7 @@ from flow import qa_flow
 # Please replace this with your own main function
 def main():
     shared = {
-        "question": "In one sentence, what's the end of universe?",
+        "question": "In one sentence, what's meaning of life?",
         "answer": None
     }
 
